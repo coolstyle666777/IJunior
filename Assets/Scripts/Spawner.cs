@@ -6,8 +6,26 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _patterns;
     [SerializeField] private float _spawnInterval;
+    private Pool _pool;
+    private Player _player;
 
     private float _elapsedTime;
+
+    private void Awake()
+    {
+        _pool = FindObjectOfType<Pool>();
+        _player = FindObjectOfType<Player>();
+    }
+
+    private void OnEnable()
+    {
+        _player.Dead += OnDead;
+    }
+
+    private void OnDisable()
+    {
+        _player.Dead -= OnDead;
+    }
 
     private void Update()
     {
@@ -23,11 +41,19 @@ public class Spawner : MonoBehaviour
     private void SpawnPattern()
     {
         int numberOfPattern = Random.Range(0, _patterns.Length);
-        foreach (Transform childTransform in _patterns[numberOfPattern].transform)
+        foreach (Transform childPoolObject in _patterns[numberOfPattern].transform)
         {
-            GameObject spawnObject = PoolObjects.Instance.GetObject(childTransform.gameObject);
-            spawnObject.transform.position = childTransform.position;
-            spawnObject.SetActive(true);
+            if(childPoolObject.TryGetComponent(out PoolObject poolObject))
+            {
+                PoolObject spawnObject = _pool.GetObject(poolObject);
+                spawnObject.transform.position = childPoolObject.position;
+                spawnObject.gameObject.SetActive(true);
+            }        
         }       
+    }
+
+    private void OnDead()
+    {
+        gameObject.SetActive(false);
     }
 }

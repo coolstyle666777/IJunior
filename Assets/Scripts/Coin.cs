@@ -7,7 +7,6 @@ public class Coin : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            player.PickedCoin?.Invoke();
             gameObject.SetActive(false);
         }
     }

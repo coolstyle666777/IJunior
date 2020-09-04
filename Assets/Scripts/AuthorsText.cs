@@ -18,7 +18,7 @@ public class AuthorsText : MonoBehaviour
         _textTransform = GetComponent<RectTransform>();
     }
 
-    public void PlayText()
+    public void MoveText()
     {
         _textTween = _textTransform.DOLocalMoveY(_endPositionY, _playSpeed).SetSpeedBased();
     }

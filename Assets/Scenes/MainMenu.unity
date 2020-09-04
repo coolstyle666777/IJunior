@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 495077804}
   - component: {fileID: 495077807}
   - component: {fileID: 495077806}
+  - component: {fileID: 495077808}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -709,10 +710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb2a2bccbb88454eb9f0121055d05da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vanishDuration: 10
-  _reverseDuration: 2
-  _playSoundTime: 2.1
-  _reverseSoundTime: 1.7
 --- !u!225 &495077807
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -725,6 +722,22 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &495077808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495077802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109a5f09129cc1243a060e89b9023cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reverseDuration: 2
+  _vanishDuration: 10
+  _playSoundTime: 2.1
+  _reverseSoundTime: 2.1
 --- !u!1 &545059699
 GameObject:
   m_ObjectHideFlags: 0

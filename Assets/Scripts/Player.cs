@@ -5,19 +5,19 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    public UnityEvent Death;
-    public UnityEvent PickedCoin;
+    public UnityAction Dead;
+    public UnityAction CoinPicked;
 
-    private void Awake()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Death == null)
+        if (collision.TryGetComponent(out Coin coin))
         {
-            Death = new UnityEvent();
+            CoinPicked?.Invoke();
         }
     }
 
-    public void Dead()
+    public void Death()
     {
-        Death?.Invoke();
+        Dead?.Invoke();
     }
 }

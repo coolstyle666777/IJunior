@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 public class EndPanel : MonoBehaviour
 {
     private CanvasGroup _panel;
+    private Player _player;
+    private const int NUMBER_OF_MENUSCENE = 0;
 
     private void Awake()
     {
         _panel = GetComponent<CanvasGroup>();
+        _player = FindObjectOfType<Player>();
     }
 
-    public void ShowPanel()
+    private void OnEnable()
+    {
+        _player.Dead += OnDead;
+    }
+
+    private void OnDisable()
+    {
+        _player.Dead -= OnDead;
+    }
+
+    public void OnDead()
     {
         _panel.alpha = 1;
         _panel.blocksRaycasts = true;
@@ -25,6 +38,6 @@ public class EndPanel : MonoBehaviour
 
     public void OnMenuButtonClick()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(NUMBER_OF_MENUSCENE);
     }
 }

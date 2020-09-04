@@ -2,15 +2,31 @@
 
 public class LevelMover : MonoBehaviour
 {
-    private GameState _gameData;
+    [SerializeField] private float _gameSpeed = 12;
+    private Player _player;
 
     private void Awake()
     {
-        _gameData = FindObjectOfType<GameState>();
+        _player = FindObjectOfType<Player>();
+    }
+
+    private void OnEnable()
+    {
+        _player.Dead += OnDead;
+    }
+
+    private void OnDisable()
+    {
+        _player.Dead -= OnDead;
     }
 
     private void Update()
     {
-        transform.Translate(Vector3.left * _gameData.GameSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * _gameSpeed * Time.deltaTime);
+    }
+
+    public void OnDead()
+    {
+        _gameSpeed = 0;
     }
 }

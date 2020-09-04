@@ -190,7 +190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &307843017
 Rigidbody2D:
@@ -632,50 +632,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588581170}
   m_CullTransparentMesh: 0
---- !u!1 &731393957
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 731393959}
-  - component: {fileID: 731393958}
-  m_Layer: 0
-  m_Name: GameState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &731393958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731393957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba99d5137eea2a4ba4da0b7d0237772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _gameSpeed: 12
---- !u!4 &731393959
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731393957}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1800445, y: -1.9687072, z: -0.77232903}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052942911
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,7 +893,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432074040
 GameObject:
@@ -968,7 +924,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1432074042
 MonoBehaviour:
@@ -983,11 +939,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _patterns:
-  - {fileID: 3986552449078520156, guid: 972a3f6293922dd47bc84c8c5495f5a1, type: 3}
-  - {fileID: 3501566885204176573, guid: 19bdf0c4abeda994aaed13f2a842fc16, type: 3}
-  - {fileID: 3573564131136260267, guid: 531ae6a50e230fc42abb3b6913c644b5, type: 3}
-  - {fileID: 8222895607695216940, guid: ed9b734202c4f844a91278bfd74ba830, type: 3}
-  - {fileID: 9006042999074731315, guid: 3acf5dbeea5cdf447b4f28a40b6beac4, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _spawnInterval: 0.8
 --- !u!1 &1456738397
 GameObject:
@@ -1019,8 +975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabs:
-  - {fileID: 7144014039835927206, guid: eb9320bed45d5d64f9e1e5b7c88e37a6, type: 3}
-  - {fileID: 470787151337027477, guid: 34dcd35513e75584ebe35f15d44ac545, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   _startCapacity: 10
 --- !u!4 &1456738399
 Transform:
@@ -1034,7 +990,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1465670628
 GameObject:
@@ -1151,45 +1107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa04ab9b74120b4da6ce12e151f83a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Death:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 731393958}
-        m_MethodName: StopGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 588581172}
-        m_MethodName: ShowPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  PickedCoin:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 520908393}
-        m_MethodName: AddCoin
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1533532144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1535,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2100677944
 PrefabInstance:
@@ -1661,7 +1578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0e42914430de3be4aad2440e04da8421, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0e42914430de3be4aad2440e04da8421, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

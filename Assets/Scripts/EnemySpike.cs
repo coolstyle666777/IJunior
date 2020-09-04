@@ -6,7 +6,7 @@ public class EnemySpike : MonoBehaviour
     {
         if(collision.TryGetComponent(out Player player))
         {
-            player.Dead();
+            player.Death();
         }
     }
 }
